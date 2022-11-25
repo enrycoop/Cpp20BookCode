@@ -1,0 +1,5 @@
+00:31:22 **** Clean-only build of configuration Debug for project first ****
+make clean 
+rm -rf ./src/firts.d ./src/firts.o
+rm -rf first
+ 
