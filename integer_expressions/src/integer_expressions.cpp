@@ -14,11 +14,17 @@ int main() {
 
 	int x;
 	while(std::cin >> x){
+		if(x % 2 != 0)
+			std::cout << "The number is even.\n";
+		else
+			std::cout << "The number is odd.\n";
 		sum = sum + x;
 		count = count + 1;
 	}
-
-	std::cout << "average = " << sum / count << "\n";
+	if(count != 0)
+		std::cout << "average = " << sum / count << "\n";
+	else
+		std::cout << "No data.\n";
 
 	return 0;
 }

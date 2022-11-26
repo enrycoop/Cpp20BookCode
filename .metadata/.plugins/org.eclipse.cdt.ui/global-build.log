@@ -1,27 +1,70 @@
-05:23:39 **** Build of configuration Debug for project integer_expressions ****
+05:53:11 **** Build of configuration Debug for project strings ****
 make all 
-Building file: ../src/integer_expressions.cpp
+Building file: ../src/strings.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/integer_expressions.d" -MT"src/integer_expressions.o" -o "src/integer_expressions.o" "../src/integer_expressions.cpp"
-Finished building: ../src/integer_expressions.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/strings.d" -MT"src/strings.o" -o "src/strings.o" "../src/strings.cpp"
+Finished building: ../src/strings.cpp
  
-Building target: integer_expressions
+Building target: strings
 Invoking: GCC C++ Linker
-g++  -o "integer_expressions" ./src/integer_expressions.o   
-Finished building target: integer_expressions
+g++  -o "strings" ./src/strings.o   
+Finished building target: strings
  
-05:24:08 **** Incremental Build of configuration Debug for project integer_expressions ****
+05:53:35 **** Incremental Build of configuration Debug for project strings ****
 make all 
 make: Nessuna operazione da eseguire per «all».
-05:27:30 **** Incremental Build of configuration Debug for project integer_expressions ****
+05:55:11 **** Incremental Build of configuration Debug for project strings ****
 make all 
-Building file: ../src/integer_expressions.cpp
+Building file: ../src/strings.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/integer_expressions.d" -MT"src/integer_expressions.o" -o "src/integer_expressions.o" "../src/integer_expressions.cpp"
-Finished building: ../src/integer_expressions.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/strings.d" -MT"src/strings.o" -o "src/strings.o" "../src/strings.cpp"
+Finished building: ../src/strings.cpp
  
-Building target: integer_expressions
+Building target: strings
 Invoking: GCC C++ Linker
-g++  -o "integer_expressions" ./src/integer_expressions.o   
-Finished building target: integer_expressions
+g++  -o "strings" ./src/strings.o   
+Finished building target: strings
+ 
+05:56:35 **** Incremental Build of configuration Debug for project strings ****
+make all 
+Building file: ../src/strings.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/strings.d" -MT"src/strings.o" -o "src/strings.o" "../src/strings.cpp"
+Finished building: ../src/strings.cpp
+ 
+Building target: strings
+Invoking: GCC C++ Linker
+g++  -o "strings" ./src/strings.o   
+Finished building target: strings
+ 
+06:02:31 **** Incremental Build of configuration Debug for project strings ****
+make all 
+Building file: ../src/strings.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/strings.d" -MT"src/strings.o" -o "src/strings.o" "../src/strings.cpp"
+../src/strings.cpp: In function ‘int main()’:
+../src/strings.cpp:21:48: warning: ‘sides’ may be used uninitialized [-Wmaybe-uninitialized]
+   21 |         std::cout << shape << '\t' << sides << '\n';
+      |                                                ^~~~
+../src/strings.cpp:14:13: note: ‘sides’ was declared here
+   14 |         int sides;
+      |             ^~~~~
+Finished building: ../src/strings.cpp
+ 
+Building target: strings
+Invoking: GCC C++ Linker
+g++  -o "strings" ./src/strings.o   
+Finished building target: strings
+ 
+06:12:13 **** Incremental Build of configuration Debug for project strings ****
+make all 
+Building file: ../src/strings.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/strings.d" -MT"src/strings.o" -o "src/strings.o" "../src/strings.cpp"
+Finished building: ../src/strings.cpp
+ 
+Building target: strings
+Invoking: GCC C++ Linker
+g++  -o "strings" ./src/strings.o   
+Finished building target: strings
  
