@@ -1,5 +1,27 @@
-00:31:22 **** Clean-only build of configuration Debug for project first ****
-make clean 
-rm -rf ./src/firts.d ./src/firts.o
-rm -rf first
+05:23:39 **** Build of configuration Debug for project integer_expressions ****
+make all 
+Building file: ../src/integer_expressions.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/integer_expressions.d" -MT"src/integer_expressions.o" -o "src/integer_expressions.o" "../src/integer_expressions.cpp"
+Finished building: ../src/integer_expressions.cpp
+ 
+Building target: integer_expressions
+Invoking: GCC C++ Linker
+g++  -o "integer_expressions" ./src/integer_expressions.o   
+Finished building target: integer_expressions
+ 
+05:24:08 **** Incremental Build of configuration Debug for project integer_expressions ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+05:27:30 **** Incremental Build of configuration Debug for project integer_expressions ****
+make all 
+Building file: ../src/integer_expressions.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/integer_expressions.d" -MT"src/integer_expressions.o" -o "src/integer_expressions.o" "../src/integer_expressions.cpp"
+Finished building: ../src/integer_expressions.cpp
+ 
+Building target: integer_expressions
+Invoking: GCC C++ Linker
+g++  -o "integer_expressions" ./src/integer_expressions.o   
+Finished building target: integer_expressions
  

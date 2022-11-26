@@ -1,15 +1,26 @@
-//============================================================================
-// Name        : firts.cpp
-// Author      : Enrycoop
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
 
 #include <iostream>
-using namespace std;
+#include <limits>
+
 
 int main() {
-	cout << "NO WORLD!" << endl; // prints NO WORLD!
+
+	//std::cout << "bits per bool: " << std::numeric_limits<bool>::digits << '\n';
+	int min{std::numeric_limits<int>::max()};
+	int max{std::numeric_limits<int>::min()};
+	bool any{false};
+
+	int x;
+	while(std::cin >> x){
+		any = true;
+		if (x < min)
+			min = x;
+		if (x > max)
+			max = x;
+	}
+
+	if (any)
+		std::cout << "min = " << min << "\nmax = " << max << "\n";
+
 	return 0;
 }
