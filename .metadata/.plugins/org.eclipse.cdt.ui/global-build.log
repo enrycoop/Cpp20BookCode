@@ -1,29 +1,6 @@
-16:20:59 **** Incremental Build of configuration Release for project arrays_and_vectors ****
-make -k -j8 all 
-Building file: ../src/arrays_and_vectors.cpp
-Invoking: GCC C++ Compiler
-g++ -O3 -Wall -c -fmessage-length=0 -std=gnu++20 -pedantic -MMD -MP -MF"src/arrays_and_vectors.d" -MT"src/arrays_and_vectors.o" -o "src/arrays_and_vectors.o" "../src/arrays_and_vectors.cpp"
-Finished building: ../src/arrays_and_vectors.cpp
- 
-Building target: arrays_and_vectors
-Invoking: GCC C++ Linker
-g++  -o "arrays_and_vectors" ./src/arrays_and_vectors.o   
-Finished building target: arrays_and_vectors
- 
-16:21:36 **** Clean-only build of configuration Release for project arrays_and_vectors ****
-make -k -j8 clean 
-rm -rf ./src/arrays_and_vectors.d ./src/arrays_and_vectors.o
-rm -rf arrays_and_vectors
- 
-16:21:37 **** Build of configuration Release for project arrays_and_vectors ****
-make -k -j8 all 
-Building file: ../src/arrays_and_vectors.cpp
-Invoking: GCC C++ Compiler
-g++ -O3 -Wall -c -fmessage-length=0 -std=gnu++20 -pedantic -MMD -MP -MF"src/arrays_and_vectors.d" -MT"src/arrays_and_vectors.o" -o "src/arrays_and_vectors.o" "../src/arrays_and_vectors.cpp"
-Finished building: ../src/arrays_and_vectors.cpp
- 
-Building target: arrays_and_vectors
-Invoking: GCC C++ Linker
-g++  -o "arrays_and_vectors" ./src/arrays_and_vectors.o   
-Finished building target: arrays_and_vectors
- 
+17:57:40 **** Incremental Build of configuration Release for project algorithms_ranges ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+17:57:43 **** Incremental Build of configuration Release for project algorithms_ranges ****
+make all 
+make: Nessuna operazione da eseguire per «all».

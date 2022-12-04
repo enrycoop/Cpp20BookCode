@@ -20,7 +20,7 @@ int main() {
 		data.emplace_back(x); //memorizza ogni intero nel vettore.
 
 
-	std::ranges::sort(data); // @suppress("Function cannot be resolved")
+	std::ranges::sort(data);
 
 
 	for(int element : data)
