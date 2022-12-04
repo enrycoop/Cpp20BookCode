@@ -11,7 +11,8 @@
 
 int main() {
 	//std::string shape; //automatically init to ""
-	//int sides{};
+	//
+	int sides{};
 
 	std::cout << "Shape\t\tSides\n" << "-----\t\t-----\n";
 	std::cout << "Square\t\t" << 4 << '\n' <<

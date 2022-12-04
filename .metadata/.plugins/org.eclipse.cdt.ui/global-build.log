@@ -1,70 +1,29 @@
-05:53:11 **** Build of configuration Debug for project strings ****
-make all 
-Building file: ../src/strings.cpp
+16:20:59 **** Incremental Build of configuration Release for project arrays_and_vectors ****
+make -k -j8 all 
+Building file: ../src/arrays_and_vectors.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/strings.d" -MT"src/strings.o" -o "src/strings.o" "../src/strings.cpp"
-Finished building: ../src/strings.cpp
+g++ -O3 -Wall -c -fmessage-length=0 -std=gnu++20 -pedantic -MMD -MP -MF"src/arrays_and_vectors.d" -MT"src/arrays_and_vectors.o" -o "src/arrays_and_vectors.o" "../src/arrays_and_vectors.cpp"
+Finished building: ../src/arrays_and_vectors.cpp
  
-Building target: strings
+Building target: arrays_and_vectors
 Invoking: GCC C++ Linker
-g++  -o "strings" ./src/strings.o   
-Finished building target: strings
+g++  -o "arrays_and_vectors" ./src/arrays_and_vectors.o   
+Finished building target: arrays_and_vectors
  
-05:53:35 **** Incremental Build of configuration Debug for project strings ****
-make all 
-make: Nessuna operazione da eseguire per «all».
-05:55:11 **** Incremental Build of configuration Debug for project strings ****
-make all 
-Building file: ../src/strings.cpp
+16:21:36 **** Clean-only build of configuration Release for project arrays_and_vectors ****
+make -k -j8 clean 
+rm -rf ./src/arrays_and_vectors.d ./src/arrays_and_vectors.o
+rm -rf arrays_and_vectors
+ 
+16:21:37 **** Build of configuration Release for project arrays_and_vectors ****
+make -k -j8 all 
+Building file: ../src/arrays_and_vectors.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/strings.d" -MT"src/strings.o" -o "src/strings.o" "../src/strings.cpp"
-Finished building: ../src/strings.cpp
+g++ -O3 -Wall -c -fmessage-length=0 -std=gnu++20 -pedantic -MMD -MP -MF"src/arrays_and_vectors.d" -MT"src/arrays_and_vectors.o" -o "src/arrays_and_vectors.o" "../src/arrays_and_vectors.cpp"
+Finished building: ../src/arrays_and_vectors.cpp
  
-Building target: strings
+Building target: arrays_and_vectors
 Invoking: GCC C++ Linker
-g++  -o "strings" ./src/strings.o   
-Finished building target: strings
- 
-05:56:35 **** Incremental Build of configuration Debug for project strings ****
-make all 
-Building file: ../src/strings.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/strings.d" -MT"src/strings.o" -o "src/strings.o" "../src/strings.cpp"
-Finished building: ../src/strings.cpp
- 
-Building target: strings
-Invoking: GCC C++ Linker
-g++  -o "strings" ./src/strings.o   
-Finished building target: strings
- 
-06:02:31 **** Incremental Build of configuration Debug for project strings ****
-make all 
-Building file: ../src/strings.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/strings.d" -MT"src/strings.o" -o "src/strings.o" "../src/strings.cpp"
-../src/strings.cpp: In function ‘int main()’:
-../src/strings.cpp:21:48: warning: ‘sides’ may be used uninitialized [-Wmaybe-uninitialized]
-   21 |         std::cout << shape << '\t' << sides << '\n';
-      |                                                ^~~~
-../src/strings.cpp:14:13: note: ‘sides’ was declared here
-   14 |         int sides;
-      |             ^~~~~
-Finished building: ../src/strings.cpp
- 
-Building target: strings
-Invoking: GCC C++ Linker
-g++  -o "strings" ./src/strings.o   
-Finished building target: strings
- 
-06:12:13 **** Incremental Build of configuration Debug for project strings ****
-make all 
-Building file: ../src/strings.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/strings.d" -MT"src/strings.o" -o "src/strings.o" "../src/strings.cpp"
-Finished building: ../src/strings.cpp
- 
-Building target: strings
-Invoking: GCC C++ Linker
-g++  -o "strings" ./src/strings.o   
-Finished building target: strings
+g++  -o "arrays_and_vectors" ./src/arrays_and_vectors.o   
+Finished building target: arrays_and_vectors
  

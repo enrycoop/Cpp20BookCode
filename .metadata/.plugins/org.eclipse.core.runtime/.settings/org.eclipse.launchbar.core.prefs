@@ -1,13 +1,16 @@
+LaunchTargetManager/configs/arrays_and_vectors\ Release=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/cpp_version=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/first\ Debug=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/formatted_output\ Debug=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/integer_expressions\ Debug=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/simple_input\ Debug=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/strings\ Debug=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/test_your_compiler\ Debug=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
 activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:cpp_version,org.eclipse.launchbar.core.descriptorType.default\:test_your_compiler Debug,org.eclipse.launchbar.core.descriptorType.default\:first Debug,org.eclipse.launchbar.core.descriptorType.default\:integer_expressions Debug,org.eclipse.launchbar.core.descriptorType.default\:strings Debug
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:cpp_version,org.eclipse.launchbar.core.descriptorType.default\:test_your_compiler Debug,org.eclipse.launchbar.core.descriptorType.default\:first Debug,org.eclipse.launchbar.core.descriptorType.default\:formatted_output Debug,org.eclipse.launchbar.core.descriptorType.default\:simple_input Debug,org.eclipse.launchbar.core.descriptorType.default\:strings Debug,org.eclipse.launchbar.core.descriptorType.default\:integer_expressions Debug,org.eclipse.launchbar.core.descriptorType.default\:arrays_and_vectors Release
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:cpp_version/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:cpp_version/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
