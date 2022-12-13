@@ -1,6 +1,6 @@
-15:51:59 **** Build of configuration Debug for project cpp_version ****
+01:01:38 **** Incremental Build of configuration Debug for project cpp_version ****
 make all 
 make: Nessuna operazione da eseguire per «all».
 
-15:52:00 Build Finished. 0 errors, 0 warnings. (took 719ms)
+01:01:38 Build Finished. 0 errors, 0 warnings. (took 878ms)
 

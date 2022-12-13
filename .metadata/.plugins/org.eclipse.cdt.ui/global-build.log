@@ -1,5 +1,15 @@
-00:02:13 **** Clean-only build of configuration Debug for project increment_and_decrement ****
-make clean 
-rm -rf ./src/increment_and_decrement.d ./src/increment_and_decrement.o
-rm -rf increment_and_decrement
+01:56:49 **** Incremental Build of configuration Debug for project map_data_structure ****
+make all 
+Building file: ../src/map_data_structure.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/map_data_structure.d" -MT"src/map_data_structure.o" -o "src/map_data_structure.o" "../src/map_data_structure.cpp"
+Finished building: ../src/map_data_structure.cpp
  
+Building target: map_data_structure
+Invoking: GCC C++ Linker
+g++  -o "map_data_structure" ./src/map_data_structure.o   
+Finished building target: map_data_structure
+ 
+01:56:54 **** Incremental Build of configuration Debug for project map_data_structure ****
+make all 
+make: Nessuna operazione da eseguire per «all».

@@ -15,7 +15,7 @@
 int main() {
 	
 	std::vector<int> data;
-	std::ranges::copy(std::ranges::istream_view<int>(std::cin), std::back_inserter(data));
+	std::ranges::copy(std::ranges::istream_view<int>(std::cin), std::back_inserter(data)); // @suppress("Symbol is not resolved") @suppress("Invalid arguments")
 	std::ranges::sort(data);
 	std::ranges::copy(data, std::ostream_iterator<int>{std::cout, " \n"});
 	return 0;
