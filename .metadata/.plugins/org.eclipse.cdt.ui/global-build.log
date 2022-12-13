@@ -1,15 +1,18 @@
-01:56:49 **** Incremental Build of configuration Debug for project map_data_structure ****
+23:36:39 **** Incremental Build of configuration Debug for project char_exploration ****
 make all 
-Building file: ../src/map_data_structure.cpp
+Building file: ../src/char_exploration.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/map_data_structure.d" -MT"src/map_data_structure.o" -o "src/map_data_structure.o" "../src/map_data_structure.cpp"
-Finished building: ../src/map_data_structure.cpp
+g++ -std=c++2a -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/char_exploration.d" -MT"src/char_exploration.o" -o "src/char_exploration.o" "../src/char_exploration.cpp"
+Finished building: ../src/char_exploration.cpp
  
-Building target: map_data_structure
+Building target: char_exploration
 Invoking: GCC C++ Linker
-g++  -o "map_data_structure" ./src/map_data_structure.o   
-Finished building target: map_data_structure
+g++  -o "char_exploration" ./src/char_exploration.o   
+Finished building target: char_exploration
  
-01:56:54 **** Incremental Build of configuration Debug for project map_data_structure ****
+23:36:42 **** Incremental Build of configuration Debug for project char_exploration ****
+make all 
+make: Nessuna operazione da eseguire per «all».
+23:37:39 **** Incremental Build of configuration Debug for project char_exploration ****
 make all 
 make: Nessuna operazione da eseguire per «all».
