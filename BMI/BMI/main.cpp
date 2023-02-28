@@ -37,6 +37,8 @@ int median_bmi(std::vector<double> bmis,
                double avg,
                char sex);
 
+void print_tables();
+
 
 //********** MAIN ************************************************************** //
 
@@ -93,10 +95,26 @@ double avg_bmi(std::vector<double> bmis,
 
 int median_bmi(std::vector<double> bmis,
                std::vector<char> sexes,
-               double avg,
                char sex)
 {
-    return 0;
+    std::vector<double> filtered_values{};
+    for (int i=0; i < bmis.size(); ++i)
+    {
+        if (sexes[i] == sex)
+        {
+            filtered_values.push_back(bmis[i]);
+        }
+    }
+    std::sort(filtered_values.begin(), filtered_values.end());
+    if (filtered_values.size() == 0)
+        return 0;
+    if (filtered_values.size() == 1)
+        return filtered_values[0];
+    if (filtered_values.size()%2 != 0)
+        return filtered_values[(filtered_values.size()/2)+1];
+    else
+        return (filtered_values[(filtered_values.size()/2)+1] +
+                filtered_values[(filtered_values.size()/2)]) / 2;
 }
 
 void skip_line(std::istream& data_source)
