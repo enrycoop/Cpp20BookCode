@@ -28,7 +28,8 @@ void input_data(std::istream& data_source,
                 std::vector<double> bmis,
                 double threshold);
 
-double avg_bmi(std::vector<double> bmis,
+double avg_bmi(std::ostream& log_stream,
+               std::vector<double> bmis,
                std::vector<char> sexes,
                char sex);
 
@@ -65,19 +66,16 @@ int main() {
 }
 
 
-
-
-
 // *********** IMPLEMENTATIONS ************************************************* //
 
-
-double avg_bmi(std::vector<double> bmis,
+double avg_bmi(std::ostream& log_stream,
+               std::vector<double> bmis,
                std::vector<char> sexes,
                char sex)
 {
     if (bmis.size() != sexes.size())
     {
-        std::cout << "BMI and SEX size mismatch!\n";
+        log_stream << "BMI and SEX size mismatch!\n";
         exit(2);
     }
     int count{};
