@@ -17,15 +17,35 @@
 
 //********** FUNCTIONS ********************************************************* //
 
+bool check_sizes(std::vector<std::string> names,
+                 std::vector<int> heights,
+                 std::vector<int> weights,
+                 std::vector<char> sexes,
+                 std::vector<double> bmis);
+
+void print_results(std::ostream& log_stream,
+                   std::vector<std::string>& names,
+                   std::vector<int>& heights,
+                   std::vector<int>& weights,
+                   std::vector<char>& sexes,
+                   std::vector<double>& bmis,
+                   double threshold);
+
+bool check_sizes(std::vector<std::string> names,
+                 std::vector<int> heights,
+                 std::vector<int> weights,
+                 std::vector<char> sexes,
+                 std::vector<double> bmis);
+
 void clear_buffer(std::istream& data_source);
 
 void input_data(std::istream& data_source,
                 std::ostream& log_stream,
-                std::vector<std::string> names,
-                std::vector<int> heights,
-                std::vector<int> weights,
-                std::vector<char> sexes,
-                std::vector<double> bmis,
+                std::vector<std::string>& names,
+                std::vector<int>& heights,
+                std::vector<int>& weights,
+                std::vector<char>& sexes,
+                std::vector<double>& bmis,
                 double threshold);
 
 double avg_bmi(std::ostream& log_stream,
@@ -35,10 +55,15 @@ double avg_bmi(std::ostream& log_stream,
 
 int median_bmi(std::vector<double> bmis,
                std::vector<char> sexes,
-               double avg,
                char sex);
 
-void print_tables();
+void print_results(std::ostream& log_stream,
+                   std::vector<std::string>& names,
+                   std::vector<int>& heights,
+                   std::vector<int>& weights,
+                   std::vector<char>& sexes,
+                   std::vector<double>& bmis,
+                   double threshold);
 
 
 //********** MAIN ************************************************************** //
@@ -61,12 +86,24 @@ int main() {
     std::vector<double> bmis{};
     
     input_data(input, std::cout,names, heights, weights, sexes, bmis, threshold);
-
+    print_results(std::cout, names, heights, weights, sexes, bmis, threshold);
     return 0;
 }
 
 
 // *********** IMPLEMENTATIONS ************************************************* //
+
+bool check_sizes(std::vector<std::string> names,
+                 std::vector<int> heights,
+                 std::vector<int> weights,
+                 std::vector<char> sexes,
+                 std::vector<double> bmis)
+{
+    return (names.size() == heights.size()) and
+           (names.size() == weights.size()) and
+           (names.size() == sexes.size()) and
+           (names.size() == bmis.size());
+}
 
 double avg_bmi(std::ostream& log_stream,
                std::vector<double> bmis,
@@ -111,8 +148,46 @@ int median_bmi(std::vector<double> bmis,
     if (filtered_values.size()%2 != 0)
         return filtered_values[(filtered_values.size()/2)+1];
     else
-        return (filtered_values[(filtered_values.size()/2)+1] +
-                filtered_values[(filtered_values.size()/2)]) / 2;
+        return (filtered_values[(filtered_values.size()/2)] +
+                filtered_values[(filtered_values.size()/2)-1]) / 2;
+}
+
+
+
+void print_results(std::ostream& log_stream,
+                   std::vector<std::string>& names,
+                   std::vector<int>& heights,
+                   std::vector<int>& weights,
+                   std::vector<char>& sexes,
+                   std::vector<double>& bmis,
+                   double threshold)
+{
+    if(!check_sizes(names, heights, weights, sexes, bmis)) {
+        log_stream << "Data sizes mismatch!\n";
+        exit(1);
+    }
+    // print headers
+    for (auto sex : {"Male", "Female"}) {
+        log_stream << sex << " data \n";
+        log_stream <<   " Height | "
+                        " Weight | "
+                        " BMI |"
+                        " Name \n";
+        
+        for (int i{0}; i< sexes.size(); ++i)
+        {
+            if(sexes[i] == sex[0])
+            log_stream  << " "
+                        << heights[i] << "       "
+                        << weights[i] << "        "
+                        << (int)bmis[i] << (((int)bmis[i]>=threshold)?"*":" ") << "   "
+                        << names[i] << "\n";
+        }
+        int avg = avg_bmi(log_stream, bmis, sexes, sex[0]);
+        log_stream << "Mean BMI: " << avg << '\n';
+        log_stream << "Median BMI: " << median_bmi(bmis, sexes, sex[0]) << '\n';
+    }
+    
 }
 
 void skip_line(std::istream& data_source)
@@ -122,11 +197,11 @@ void skip_line(std::istream& data_source)
 
 void input_data(std::istream& data_source,
                 std::ostream& log_stream,
-                std::vector<std::string> names,
-                std::vector<int> heights,
-                std::vector<int> weights,
-                std::vector<char> sexes,
-                std::vector<double> bmis,
+                std::vector<std::string>& names,
+                std::vector<int>& heights,
+                std::vector<int>& weights,
+                std::vector<char>& sexes,
+                std::vector<double>& bmis,
                 double threshold)
 {
     log_stream << "Enter name, height (in cm), and weight (in kg) for each person:\n";
